@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Growth System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Main Game Window -->
+    <div class="game-window">
+      <div class="corner-top-left"></div>
+      <div class="corner-top-right"></div>
+      <div class="corner-bottom-left"></div>
+      <div class="corner-bottom-right"></div>
+      
+      <!-- Player Header -->
+      <header class="player-header">
+        <div class="player-select-row">
+          <select id="userSelector" class="player-selector"></select>
+          <div class="level-badge">
+            <span class="level-text">LVL</span>
+            <span class="level-value" id="playerLevel">1</span>
+          </div>
+        </div>
+        <div class="title-row">
+          <span class="title-label">TITLE:</span>
+          <span class="title-value" id="playerTitle">NOVICE</span>
+        </div>
+      </header>
+      
+      <!-- Tab Navigation -->
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="quests">Quests</button>
+        <button class="tab-btn" data-tab="stats">Stats</button>
+        <button class="tab-btn" data-tab="inventory">Inventory</button>
+      </nav>
+      
+      <!-- Tab Content -->
+      <div class="tab-content-wrapper">
+        <!-- Quests Tab -->
+        <div class="tab-panel active" id="quests-panel">
+          <div class="panel-header">
+            <h2>Active Quests</h2>
+            <button class="add-quest-btn" id="showQuestForm">+ Add Quest</button>
+          </div>
+          <div class="quest-container">
+            <ul id="playerQuests" class="active-quest-list"></ul>
+          </div>
+        </div>
+        
+        <!-- Stats Tab -->
+        <div class="tab-panel" id="stats-panel">
+          <div class="panel-header">
+            <h2>Character Stats</h2>
+          </div>
+          <div class="stats-content">
+            <!-- HP/MP Bars -->
+            <div class="status-bars">
+              <div class="status-bar">
+                <span class="bar-label">HP</span>
+                <div class="bar-track hp-track">
+                  <div class="bar-fill hp-fill" id="hpBar"></div>
+                </div>
+                <span class="bar-text" id="hpText">1000/1000</span>
+              </div>
+              <div class="status-bar">
+                <span class="bar-label">MP</span>
+                <div class="bar-track mp-track">
+                  <div class="bar-fill mp-fill" id="mpBar"></div>
+                </div>
+                <span class="bar-text" id="mpText">200/200</span>
+              </div>
+            </div>
+            <!-- Stats Grid -->
+            <div class="stats-grid" id="statsGrid"></div>
+          </div>
+        </div>
+        
+        <!-- Inventory Tab -->
+        <div class="tab-panel" id="inventory-panel">
+          <div class="panel-header">
+            <h2>Inventory</h2>
+          </div>
+          <div class="inventory-content">
+            <p class="coming-soon">Inventory system coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Quest Form Modal -->
+    <div class="modal-overlay" id="questModal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h3>Create New Quest</h3>
+          <button class="close-btn" id="closeQuestModal">&times;</button>
+        </div>
+        <form id="createQuestForm" class="quest-form">
+          <div class="error-msg" id="questError"></div>
+          <input type="text" id="questTitle" class="form-input" placeholder="Quest Title" required>
+          <textarea id="questDesc" class="form-input form-textarea" placeholder="Quest Description" rows="3" required></textarea>
+          <select id="questStat" class="form-input" required>
+            <option value="">Select Stat</option>
+            <option value="STR">Strength (STR)</option>
+            <option value="DEX">Dexterity (DEX)</option>
+            <option value="INT">Intelligence (INT)</option>
+            <option value="WIS">Wisdom (WIS)</option>
+            <option value="CHA">Charisma (CHA)</option>
+            <option value="VIT">Vitality (VIT)</option>
+            <option value="LUK">Luck (LUK)</option>
+          </select>
+          <div class="form-row">
+            <input type="number" id="questStatGain" class="form-input" placeholder="Stat Gain" step="0.1" required>
+            <input type="number" id="questXP" class="form-input" placeholder="XP Reward" required>
+          </div>
+          <input type="hidden" id="questUser">
+          <button type="submit" class="submit-btn">Create Quest</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Admin Controls -->
+    <button class="admin-toggle" id="adminToggle" title="Admin Panel">⚙️</button>
+    
+    <div class="admin-panel" id="adminPanel">
+      <div class="admin-header">
+        <h3>Admin Panel</h3>
+        <button class="close-btn" id="closeAdmin">&times;</button>
+      </div>
+      <div class="admin-content">
+        <section class="admin-section">
+          <h4>Create User</h4>
+          <form id="createUserForm" class="admin-form">
+            <input type="text" id="userName" class="form-input" placeholder="User Name" required>
+            <button type="submit" class="submit-btn">Create</button>
+          </form>
+        </section>
+        
+        <section class="admin-section">
+          <h4>All Quests</h4>
+          <ul id="questList" class="admin-quest-list"></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Growth System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <header class="game-header">
+      <h1 class="game-title">IRL LEVELING SYSTEM</h1>
+      <div class="glow-line top"></div>
+    </header>
+
+    <div class="content-grid">
+      <!-- Player Section -->
+      <section class="player-section">
+        <div class="status-container">
+          <div class="corner-top-right"></div>
+          <div class="corner-bottom-left"></div>
+          
+          <div class="section-header">
+            <h2 class="section-title">PLAYER STATUS</h2>
+          </div>
+
+          <div class="player-selector-wrapper">
+            <label for="userSelector" class="selector-label">ACTIVE PLAYER:</label>
+            <select id="userSelector" class="styled-select"></select>
+          </div>
+
+          <div id="playerProfile" class="player-profile"></div>
+        </div>
+
+        <div class="quest-container">
+          <div class="corner-top-right"></div>
+          <div class="corner-bottom-left"></div>
+          
+          <h3 class="section-title">AVAILABLE QUESTS</h3>
+          <ul id="playerQuests" class="quest-list"></ul>
+        </div>
+      </section>
+
+      <!-- Admin Section -->
+      <section class="admin-section">
+        <div class="create-container">
+          <div class="corner-top-right"></div>
+          <div class="corner-bottom-left"></div>
+          
+          <h2 class="section-title">CREATE USER</h2>
+          <form id="createUserForm" class="styled-form">
+            <div class="form-group">
+              <input type="text" id="userName" class="styled-input" placeholder="Enter name" required />
+              <button type="submit" class="styled-button">CREATE</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="create-container">
+          <div class="corner-top-right"></div>
+          <div class="corner-bottom-left"></div>
+          
+          <h2 class="section-title">CREATE QUEST</h2>
+          <div id="questError" class="error-message"></div>
+          <form id="createQuestForm" class="styled-form">
+            <div class="form-group">
+              <input type="text" id="questTitle" class="styled-input" placeholder="Quest Title" required />
+            </div>
+            <div class="form-group">
+              <input type="text" id="questDesc" class="styled-input" placeholder="Quest Description" required />
+            </div>
+            <div class="form-group">
+              <select id="questStat" class="styled-select" required>
+                <option value="">Choose a stat</option>
+                <option value="STR">Strength (STR)</option>
+                <option value="DEX">Dexterity (DEX)</option>
+                <option value="INT">Intelligence (INT)</option>
+                <option value="WIS">Wisdom (WIS)</option>
+                <option value="CHA">Charisma (CHA)</option>
+                <option value="VIT">Vitality (VIT)</option>
+                <option value="LUK">Luck (LUK)</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <input type="number" id="questStatGain" class="styled-input" placeholder="Stat Gain" step="0.1" required />
+              <input type="number" id="questXP" class="styled-input" placeholder="XP Reward" required />
+            </div>
+            <div class="form-group">
+              <select id="questUser" class="styled-select"></select>
+            </div>
+            <button type="submit" class="styled-button">CREATE QUEST</button>
+          </form>
+        </div>
+
+        <div class="list-container">
+          <div class="corner-top-right"></div>
+          <div class="corner-bottom-left"></div>
+          
+          <h2 class="section-title">ALL QUESTS</h2>
+          <ul id="questList" class="quest-list"></ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

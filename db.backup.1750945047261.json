@@ -1,0 +1,186 @@
+{
+  "users": {
+    "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b": {
+      "name": "Igi",
+      "level": 11,
+      "stats": {
+        "STR": {
+          "xp": 1,
+          "level": 3
+        },
+        "VIT": {
+          "xp": 0,
+          "level": 1
+        },
+        "DEX": {
+          "xp": 1,
+          "level": 3
+        },
+        "INT": {
+          "xp": 0,
+          "level": 1
+        },
+        "WIS": {
+          "xp": 0,
+          "level": 1
+        },
+        "CHA": {
+          "xp": 0,
+          "level": 1
+        },
+        "LUK": {
+          "xp": 0,
+          "level": 1
+        }
+      },
+      "id": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    },
+    "ce1f8107-77ae-4785-8a80-92115b96a840": {
+      "name": "Gregor",
+      "level": 9,
+      "stats": {
+        "STR": {
+          "xp": 0,
+          "level": 1
+        },
+        "VIT": {
+          "xp": 0,
+          "level": 1
+        },
+        "DEX": {
+          "xp": 0,
+          "level": 2
+        },
+        "INT": {
+          "xp": 0,
+          "level": 2
+        },
+        "WIS": {
+          "xp": 0,
+          "level": 1
+        },
+        "CHA": {
+          "xp": 0,
+          "level": 1
+        },
+        "LUK": {
+          "xp": 0,
+          "level": 1
+        }
+      },
+      "id": "ce1f8107-77ae-4785-8a80-92115b96a840"
+    }
+  },
+  "quests": [
+    {
+      "id": 1750261553205,
+      "title": "Read",
+      "description": "Read 10 pages",
+      "stat": "INT",
+      "xp": 25,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b",
+      "statGain": 1
+    },
+    {
+      "id": 1750267004441,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "INT",
+      "xp": 20,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b",
+      "statGain": 1
+    },
+    {
+      "id": 1750280987660,
+      "title": "Test",
+      "description": "Obvious",
+      "stat": "STR",
+      "xp": 200,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b",
+      "statGain": 1
+    },
+    {
+      "id": 1750281931076,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "STR",
+      "xp": 200,
+      "statGain": 1,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    },
+    {
+      "id": 1750284389818,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "DEX",
+      "xp": 12,
+      "statGain": 1,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    },
+    {
+      "id": 1750284457863,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "INT",
+      "xp": 13,
+      "statGain": 1,
+      "completed": true,
+      "userId": "ce1f8107-77ae-4785-8a80-92115b96a840"
+    },
+    {
+      "id": 1750284500439,
+      "title": "Test",
+      "description": "Obvious",
+      "stat": "DEX",
+      "xp": 22,
+      "statGain": 1,
+      "completed": true,
+      "userId": "ce1f8107-77ae-4785-8a80-92115b96a840"
+    },
+    {
+      "id": 1750284758947,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "DEX",
+      "xp": 12,
+      "statGain": 1,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    },
+    {
+      "id": 1750598064851,
+      "title": "Test",
+      "description": "Obvious",
+      "stat": "STR",
+      "xp": 4,
+      "statGain": 1,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    },
+    {
+      "id": 1750603757781,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "STR",
+      "xp": 5,
+      "statGain": 1,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    },
+    {
+      "id": 1750618243205,
+      "title": "Brush Teeth",
+      "description": "Obvious",
+      "stat": "DEX",
+      "xp": 12,
+      "statGain": 1,
+      "completed": true,
+      "userId": "5ab9c860-86ea-4ee1-a3d0-df4ab15fad7b"
+    }
+  ]
+}
